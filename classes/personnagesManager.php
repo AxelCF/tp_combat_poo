@@ -2,6 +2,7 @@
 Class PersonnagesManager{
     
 }
+?>
 <?php 
 require_once "../config/db.php";
 ?>
