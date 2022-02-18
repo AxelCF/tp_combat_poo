@@ -1,14 +1,23 @@
 <?php
 
-Class Combat {
+Class CombatManager {
 
-private $playerOne;
-private $playerTwo;
+    public function countCombat(){
 
-public function addPlayerOne(){
+    }
+    public function editCombat(){
 
-}
-public function addPlayerTwo(){
-    
-}
+    }
+    public function removeCombat(){
+        
+    }
+    public function addCombat(){
+        try {
+            $bdd = new PDO("mysql:host=localhost;dbname=jeu_combat;charset=utf8","root", "");
+            $addCombat = $bdd->prepare("INSERT INTO combats (id_personnage, id_personnage2) VALUE (?, ?)");
+            $addCombat->execute(array());
+        } catch (Exception $e){
+            die('Erreur : ' . $e->getMessage());
+        }
+    }
 }
